@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Katik Persegi</title>
+</head>
+
+<body>
+	<header>
+        <h1>Katik Kalkulator Anak Ibu</h1>
+    </header>
+
+	<div class="isi">
+        <h4>Welcome to Katik kalkulator</h4>
+        <p>Web Ini Digunakan Untuk Menghitung Luas dan Keliling Persegi Dalam Rangka Menyelesaikan Project</p>
+    </div>
+
+	<div class="bab">
+		<p><b>Persegi</b></p>
+	</div>
+
+  <div id="calculator">
+    <img src="gambar/persegi.jpg" class="gambar persegi" alt="...">
+    <h1>Rumus Luas dan Keliling</h1>
+    <div id="rumus">
+      <p>Luas (L) = sisi x sisi</p>
+      <p>Keliling (K) = 4 x sisi</p>
+  </div>
+    <h2>Kalkulator Persegi</h2>
+    <label for="side">Panjang Sisi Persegi :</label>
+    <input type="number" id="side" placeholder="Masukkan panjang sisi" required>
+
+    <button onclick="calculate()">Hitung</button>
+
+    <h3>Hasil:</h3>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    function calculate() {
+      var side = parseFloat(document.getElementById('side').value);
+      var area = side * side;
+      var perimeter = 4 * side;
+
+      document.getElementById('result').innerHTML = "Luas: " + area + "<br>Keliling: " + perimeter;
+    }
+  </script>
+
+</body>
+</html>
